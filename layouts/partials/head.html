@@ -1,0 +1,34 @@
+<title>
+  {{ .Site.Title }} - {{ .Site.Params.Description }}
+</title>
+
+<!-- // { Meta Tags } -->
+{{ hugo.Generator }}
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+<meta name="description" content="{{- .Site.Params.description -}}">
+
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+
+<!-- // { Styling } -->
+<style type="text/css">
+  {{ (resources.Get "css/main.scss" | toCSS | minify).Content | safeCSS }}
+</style>
+
+<!-- // { Fonts } -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Montserrat:wght@300&display=swap">
+<link rel="preload" as="script" href="https://kit.fontawesome.com/a1b60d1457.js">
+<link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Montserrat:wght@300&display=swap">
+<noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Montserrat:wght@300&display=swap">
+</noscript>
+<script src="https://kit.fontawesome.com/a1b60d1457.js" crossorigin="anonymous" defer></script>
+
+{{ if .IsHome }}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer></script>
+{{ end }}
+
+<!-- // { Analytics by Fathom } -->
+<script src="https://kings-leon-beautiful.remysheppard.com/script.js" data-site="HQLNZTEA" defer></script>

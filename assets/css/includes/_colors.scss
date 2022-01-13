@@ -1,0 +1,29 @@
+// { Colors File }
+// { Basics }
+$black: #000;
+$white: #fff;
+$red: #eb5e55;
+$blue: #63b0cd;
+
+// { Color Breakdowns }
+  // { Red }
+  $r-100: #fbddda;
+  $r-200: #f6bab6;
+  $r-300: #f29891;
+  $r-400: #ee766d;
+  $r-500: $red;
+  $r-600: #c92318;
+  $r-700: #921a11;
+  $r-800: #6e130d;
+  $r-900: #490d09;
+
+  // { Blue }
+  $b-100: #d1e8f0;
+  $b-200: #b2d8e6;
+  $b-300: #a3d0e1;
+  $b-400: #84c1d7;
+  $b-500: $blue;
+  $b-600: #3c98b9;
+  $b-700: #327e9a;
+  $b-800: #28657b;
+  $b-900: #193f4d;
