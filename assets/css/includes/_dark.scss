@@ -1,0 +1,8 @@
+body.dark-mode {
+		background: $p-800;
+		color: $g-200;
+
+		img {
+			 filter: brightness(.8) contrast(1.2);
+		}
+}

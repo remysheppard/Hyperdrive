@@ -22,4 +22,8 @@ body:not(.user-is-tabbing) textarea:focus {
 @import "includes/_fonts";
 @import "includes/_colors";
 @import "includes/_scrollbar";
-@import "includes/_header";
+@import "includes/_dark-toggle";
+
+@import "includes/_continual";
+
+@import "includes/_dark";

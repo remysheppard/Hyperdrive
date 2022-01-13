@@ -1,0 +1,7 @@
+{{- $logo := (resources.Get "images/plane-logo.png").Resize "250x webp q70" -}}
+<header class="main-header">
+	<div class="logo-block">
+		<img src="{{ $logo.RelPermalink }}" description="The hyperdrive website development logo: a paper plane in motion" alt="{{ .Site.Title }}" height="{{ div $logo.Height 2 }}" width="{{ div $logo.Width 2 }}">
+	</div>
+	{{ partial "dark-toggle" . }}
+</header>
