@@ -1,4 +1,4 @@
-{{- $logo := (resources.Get "images/plane-logo.png").Resize "200x webp q70" -}}
+{{- $logo := (resources.Get "images/hyperdrive-logo.png").Resize "400x webp q70" -}}
 <nav class="main-navigation">
 	<ul class="main-menu" id="menu-element">
 			<li class="main-menu-link">
@@ -11,8 +11,8 @@
 				<a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a>
 			</li>
 		{{ end }}
+			
+			{{ partial "dark-toggle" . }}
 	
-		{{ partial "dark-toggle" . }}
-
 	</ul>
-	</nav>
+</nav>

@@ -1,38 +1,29 @@
 body.dark-mode {
-		background: $p-800;
-		color: $g-200;
+	background: $p-800;
+	color: $g-200;
+	
+	img {
+		filter: brightness(.8) contrast(1.2);
+	}
 
-		.main-navigation {
-			background: $p-800;
-		}
+	&::-webkit-scrollbar-track {
+	  box-shadow: none;
+	}
 
-		.lead-header {
-			.right-side {
-				.lead-form {
-					background: $p-700;
-				}
-			}
-		}
+	&::-webkit-scrollbar {
+    width: 15px;
+    background: $p-800;
+	}
 
-		img {
-			 filter: brightness(.8) contrast(1.2);
-		}
+	&::-webkit-scrollbar-thumb {
+    background-color: $p-200;
 
-		&::-webkit-scrollbar-track {
-		    box-shadow: none;
-		}
+    &:hover {
+      background-color: $p-300;
+    }
+	}
 
-		&::-webkit-scrollbar {
-		    width: 15px;
-		    background: $b-900;
-		}
-
-		&::-webkit-scrollbar-thumb {
-		    background-color: $b-200;
-
-		    &:hover {
-		        background-color: $b-300;
-		    }
-		}
+	@import "dark/_header";
+	@import "dark/_cta";
 
 }
