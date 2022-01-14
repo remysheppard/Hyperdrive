@@ -2,5 +2,88 @@ body {
   background: $g-100;
   color: $p-900;
   height: 200vh;
+  display: relative;
 }
 
+.main-navigation {
+  position: sticky;
+  top: 0; right: 0; left: 0;
+
+  padding: 1em 20%;
+  margin-bottom: 1em;
+
+  box-shadow: 0 5px 10px 1px rgba($black, 0.5);
+
+  background: $g-100;
+
+  ul.main-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    li.main-menu-link {
+
+    }
+  }
+}
+
+.lead-header {
+  width: clamp(65%, 980px, 90%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: 40em) {
+    flex-direction: row;
+  }
+
+  .left-side {
+    min-width: 40%;
+
+    margin: 0 1em;
+    padding: 1em;
+  }
+
+  .right-side {
+    min-width: 40%;
+
+    margin: 0 1em;
+    padding: 1em;
+
+    border-radius: 40% 60% 89% 11% / 48% 67% 33% 52%;
+    background-image: linear-gradient(22deg, $b-800, $b-400);
+
+    .lead-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      background: $g-100;
+      padding: 1em;
+      border-radius: 1em;
+      box-shadow: 0 0 5px 1px rgba($black, 0.5);
+      width: 75%;
+      margin: 0 auto;
+
+      input, textarea {
+        margin: 1em 0;
+
+        padding: 0.5rem 1rem;
+
+        border-radius: 1em;
+        border: 1px solid $p-900;
+
+        color: $p-500;
+
+        font-family: $heading;
+        font-size: 1.12em;
+
+        box-shadow: 0 0 5px 1px rgba($black, 0.5);
+      }
+
+    }
+  }
+}

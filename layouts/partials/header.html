@@ -1,7 +1,18 @@
-{{- $logo := (resources.Get "images/plane-logo.png").Resize "250x webp q70" -}}
-<header class="main-header">
-	<div class="logo-block">
-		<img src="{{ $logo.RelPermalink }}" description="The hyperdrive website development logo: a paper plane in motion" alt="{{ .Site.Title }}" height="{{ div $logo.Height 2 }}" width="{{ div $logo.Width 2 }}">
-	</div>
-	{{ partial "dark-toggle" . }}
-</header>
+{{- $logo := (resources.Get "images/plane-logo.png").Resize "200x webp q70" -}}
+<nav class="main-navigation">
+	<ul class="main-menu" id="menu-element">
+			<li class="main-menu-link">
+				<a href="{{ .Site.BaseURL }}">
+					<img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }}" height="{{ div $logo.Height 4 }}" width="{{ div $logo.Width 4 }}">
+				</a>
+			</li>
+		{{ range .Site.Menus.main }}
+			<li class="main-menu-link">
+				<a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a>
+			</li>
+		{{ end }}
+	
+		{{ partial "dark-toggle" . }}
+
+	</ul>
+	</nav>

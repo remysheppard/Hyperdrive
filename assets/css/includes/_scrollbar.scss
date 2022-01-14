@@ -6,14 +6,15 @@
 *::-webkit-scrollbar
 {
     width: 15px;
-    background: $b-900;
+    background: $b-200;
 }
 
 *::-webkit-scrollbar-thumb
 {
-    background-color: $b-200;
+    background-color: $b-900;
+    border-radius: 1em;
 
     &:hover {
-        background-color: $b-400;
+        background-color: $b-800;
     }
 }

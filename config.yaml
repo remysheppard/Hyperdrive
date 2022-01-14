@@ -3,3 +3,25 @@ title: Hyperdrive Website Development
 
 params:
   description: Hyperdrive exists to develop high-end bespoke website solutions for your business or brand.hyperdrivecodes
+
+menu:
+  main:
+  - identifier: home
+    name: Home
+    pre: h
+    url: /
+
+  - identifier: about
+    name: About
+    pre: a
+    url: /
+
+  - identifier: portfolio
+    name: Portfolio
+    pre: p
+    url: /
+
+  - identifier: contact
+    name: Contact
+    pre: c
+    url: /
