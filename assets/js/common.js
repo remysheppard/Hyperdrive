@@ -52,3 +52,6 @@ if (localStorage.getItem('darkMode')) {
 			e.classList.add('fa-house-night')
 		})
 }
+
+// Latest Post
+//this doesn't exist yet, but will pull the latest post from https://www.remysheppard.com/index.xml
