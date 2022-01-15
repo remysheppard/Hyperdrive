@@ -11,6 +11,11 @@
   --step-5: clamp(1.80rem, 0.66rem + 5.72vw, 4.74rem);
 }
 
+.inner-content {
+  width: clamp(65%, 980px, 90%);
+  margin: 0 auto;
+}
+
 // { A11y considersations }
 body:not(.user-is-tabbing) button:focus,
 body:not(.user-is-tabbing) input:focus,

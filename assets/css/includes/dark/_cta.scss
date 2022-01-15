@@ -1,14 +1,26 @@
-.shape-blob {
-	background: $p-500;
-}
+.lead-header { 
 
-.lead-header {
-	
-	.right-side {
-	    background-image: linear-gradient(22deg, $p-200, $p-400);
+  .left-side {
+    background: $p-200;
 
-		.lead-form {
-			background: $p-700;
-		}
-	}
+  }
+
+  .right-side {
+
+    form {
+      background: $p-500;
+
+      h4 {
+        color: $p-100;
+      }
+
+      .form-group {
+        
+        label {
+          color: $r-200;
+        }
+      }
+    }
+
+  }
 }
