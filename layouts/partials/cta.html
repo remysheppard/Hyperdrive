@@ -4,26 +4,26 @@
 		<h2 class="h4 copy">Get a high quality website for your business that you never have to worry about, with fair and upfront pricing.</h2>
 	</div>
 	<div class="right-side">
-		<form netlify method="post" action="/thank-you-cta">
+		<form method="get" action="/funnel/onboard">
 			<h3 class="h5">Let's get started!</h3>
 			<h4 class="base">What's your...</h4>
 			
 			<div class="form-group">
 				<label for="name">First name?</label>
-				<input type="text" name="name" value="John Q. Smith">
+				<input type="text" name="name" placeholder="John" required>
 			</div>
 			
 			<div class="form-group">
 				<label for="name">Best email?</label>
-				<input type="email" name="email" value="j.q.smith88@gmail.com">
+				<input type="email" name="email" placeholder="j.q.smith88@gmail.com" reqired>
 			</div>
 			
 			<div class="form-group">
 				<label for="name">Cell?</label>
-				<input type="tel" name="phone" value="(910) 555 - 8855">
+				<input type="tel" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" required name="phone" placeholder="(910) 555 - 8855">
 			</div>
 
-			<button type="submit" name="submit">Call me!</button>
+			<button type="submit" name="submit">I'm ready!</button>
 
 		</form>
 	</div>

@@ -2,17 +2,24 @@
 <nav class="main-navigation">
 	<ul class="main-menu" id="menu-element">
 			<li class="main-menu-link">
-				<a href="{{ .Site.BaseURL }}">
+				<a href="{{ .Site.BaseURL }}" class="logo">
 					<img src="{{ $logo.RelPermalink }}" alt="{{ .Site.Title }}" height="{{ div $logo.Height 4 }}" width="{{ div $logo.Width 4 }}">
 				</a>
 			</li>
 		{{ range .Site.Menus.main }}
-			<li class="main-menu-link">
-				<a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a>
+			<li class="main-menu-link mobile-none">
+				<a href="{{ .URL }}">{{ .Pre }}&nbsp;{{ .Name }}</a>
 			</li>
 		{{ end }}
 			
 			{{ partial "dark-toggle" . }}
 	
+			<li class="main-menu-link">
+				<span id="mobile-trigger" class="mobile-trigger">
+					<span class="xsmall">Menu</span>
+					<i class="fa-regular fa-bars"></i>
+				</span>
+			</li>
+
 	</ul>
 </nav>

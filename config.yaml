@@ -8,20 +8,24 @@ menu:
   main:
   - identifier: home
     name: Home
-    pre: h
+    pre: <i class="fa-solid fa-house-day" name="house-icon"></i>
     url: /
+    weight: 1
 
   - identifier: about
     name: About
-    pre: a
+    pre: <i class="fa-solid fa-rocket-launch"></i>
     url: /
+    weight: 2
 
   - identifier: portfolio
     name: Portfolio
-    pre: p
+    pre: <i class="fa-solid fa-display-code"></i>
     url: /
+    weight: 3
 
   - identifier: contact
     name: Contact
-    pre: c
+    pre: <i class="fa-solid fa-comment-arrow-up-right"></i>
     url: /
+    weight: 4

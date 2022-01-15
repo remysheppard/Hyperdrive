@@ -4,6 +4,7 @@
     {{- partial "head.html" . -}}
   </head>
   <body>
+    {{- partial "mobile-navigation" . -}}
     {{- partial "header.html" . -}}
     <div id="content">
       {{- block "main" . }}{{- end }}
