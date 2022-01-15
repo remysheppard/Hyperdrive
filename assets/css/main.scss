@@ -16,6 +16,8 @@
   margin: 0 auto;
 }
 
+#content { overflow: hidden; }
+
 // { A11y considersations }
 body:not(.user-is-tabbing) button:focus,
 body:not(.user-is-tabbing) input:focus,
