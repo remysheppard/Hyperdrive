@@ -1,10 +1,41 @@
+{{ $img := (resources.Get "images/money.png").Resize "x350 webp q85" }}
 <section class="inner-content how-it-works">
 	<aside>
 		<h3>
 			<span>$0</span> Down, <span>$200</span> a month<br>
-			<span class="h4" style="color:inherit">Simple As.</span>
+			<span class="h4" style="color:inherit">No Contracts. No Hassle. Simple As.</span>
 		</h3>
+		<p>
+			Get the website you want with no contracts, no hassle, and no giant down payment. For <strong>$200</strong> a month your business will have a professional, 5-page website available online that you never have to worry about.
+		</p>
 
+		<h4>What you get for <span>$200</span>:</h4>
+		<div class="benefits-list">
+			<ul>
+				<li>Item One<br>
+					<span class="expanded">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper ante sed sagittis ultrices. Cras malesuada dui bibendum, posuere odio sit amet, vulputate est. Vivamus.</span>
+				</li>
+				<li>Item three<br>
+					<span class="expanded">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper ante sed sagittis ultrices. Cras malesuada dui bibendum, posuere odio sit amet, vulputate est. Vivamus.</span>
+				</li>
+				<li>Item five<br>
+					<span class="expanded">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper ante sed sagittis ultrices. Cras malesuada dui bibendum, posuere odio sit amet, vulputate est. Vivamus.</span>
+				</li>
+			</ul>
+			<ul>
+				<li>Item two<br>
+					<span class="expanded">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper ante sed sagittis ultrices. Cras malesuada dui bibendum, posuere odio sit amet, vulputate est. Vivamus.</span>
+				</li>
+				<li>Item four<br>
+					<span class="expanded">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper ante sed sagittis ultrices. Cras malesuada dui bibendum, posuere odio sit amet, vulputate est. Vivamus.</span>
+				</li>
+				<li>Item six<br>
+					<span class="expanded">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ullamcorper ante sed sagittis ultrices. Cras malesuada dui bibendum, posuere odio sit amet, vulputate est. Vivamus.</span>
+				</li>
+			</ul>
+		</div>
 	</aside>
-	<img src="{{ ((resources.Get "images/money.png").Resize "x350 webp q85").RelPermalink }}">
+	<aside class="savings-joy" style="height:{{ $img.Height }}px">
+		<img src="{{ $img.RelPermalink }}">
+	</aside>
 </section>

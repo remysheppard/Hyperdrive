@@ -1,4 +1,5 @@
 .how-it-works {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -10,7 +11,26 @@
 		}
 	}
 
+	aside.savings-joy {
+		border-radius: 40% 60% 89% 11% / 48% 67% 33% 52%;
+    background: rgba($r-300, 0.3);
+
+    position: sticky;
+    top: 0;
+
+    animation: moneyGuy 20s ease-in-out infinite both alternate;
+	}
+
 	@media only screen and (min-width: 40em) {
 		flex-direction: row;
 	}
+}
+
+@keyframes moneyGuy {
+    0%,
+	  100% { border-radius: 37% 63% 51% 49% / 30% 30% 70% 70%; } 
+		20%  { border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%; }
+		40%  { border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%; } 
+		60%  { border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%; } 
+		80%  { border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%; } 
 }
