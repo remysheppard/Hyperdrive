@@ -1,14 +1,19 @@
 .how-it-works {
+	aside.savings-joy {
+    background: rgba($p-300, 0.3);
+  }
+}
 
-	aside {
+.benefits-list {
 
-		span {
-			color: $p-100;
+	ul {
+
+		li {
+			color: $p-200;
+
+			.expanded {
+				color: $white;
+			}
 		}
 	}
-
-	aside.savings-joy {
-    background: rgba($p-200, 0.3);
-	}
-
 }

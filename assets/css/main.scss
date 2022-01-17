@@ -11,13 +11,6 @@
   --step-5: clamp(1.80rem, 0.66rem + 5.72vw, 4.74rem);
 }
 
-.inner-content {
-  width: clamp(65%, 980px, 90%);
-  margin: 0 auto;
-}
-
-#content { overflow: hidden; }
-
 // { A11y considersations }
 body:not(.user-is-tabbing) button:focus,
 body:not(.user-is-tabbing) input:focus,
@@ -32,6 +25,7 @@ body:not(.user-is-tabbing) textarea:focus {
 @import "includes/_dark-toggle";
 
 @import "includes/_continual";
+@import "includes/_get-started";
 @import "includes/_header";
 @import "includes/_cta.scss";
 @import "includes/_our-model";

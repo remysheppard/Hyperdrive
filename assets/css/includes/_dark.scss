@@ -1,6 +1,19 @@
 body.dark-mode {
 	background: $p-600;
 	color: darken($white, 2%);
+
+	#content { 
+
+	  a {
+	    color: $p-200;
+	    border-bottom-color:$r-500;
+
+	    &:hover {
+	      color: $r-500;
+	      border-bottom-color: $p-200;
+	    }
+	  }
+	}
 	
 	img {
 		filter: brightness(.8) contrast(1.2);
@@ -23,6 +36,12 @@ body.dark-mode {
     }
 	}
 
+	span.emphasis {
+		color: $p-200;
+		font-weight: 600;
+	}
+
+	@import "dark/_get-started";
 	@import "dark/_header";
 	@import "dark/_cta";
 	@import "dark/_our-model";
