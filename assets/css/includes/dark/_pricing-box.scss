@@ -1,0 +1,29 @@
+.pricing-box {
+	background: $p-200;
+	border: 2px solid $p-800;
+	box-shadow: 0 0 30px 0 rgba($white, 0.4);
+
+	.right {
+		form {
+			input {
+	      color: $p-800;
+
+	      &:focus {
+	      	box-shadow: 0 0 30px 0 rgba($white,0.5);
+	      }
+			}
+
+			button {
+				background: $p-400;
+				border: 1px solid $p-800;
+				box-shadow: 0 0 30px 0 rgba($white,0.5);
+
+				&:hover {
+					background: $p-300;
+				}
+			}
+		}
+
+	}
+
+}

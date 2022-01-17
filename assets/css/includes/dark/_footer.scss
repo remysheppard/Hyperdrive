@@ -1,6 +1,7 @@
 svg.footer-waves {
-	fill: $r-800;
+	fill: rgba($p-800,0.6);
 	margin: 0 0 -14px 0;
+	filter: drop-shadow(0px 0px 35px rgba($white,.4));
 }
 
 footer.site-footer {
@@ -10,5 +11,5 @@ footer.site-footer {
 	margin: 0;
 
 	color: $white;
-	background: $r-800;
+	background: rgba($p-800,0.6);
 }
