@@ -1,0 +1,18 @@
+{{ $img := "" }}
+{{ with resources.Get "images/me4.jpg" }}
+	{{ $img = .Resize "600x webp q85 r-90" }}
+{{ end }}
+
+<h3 class="h1" style="text-align: center;" id="about">About <span class="emphasis">Our</span> Founder</h3>
+
+<section class="biography inner-content">
+	<div class="bio-img">
+		<img src="{{ $img.RelPermalink }}" width="{{ div $img.Width 2 }}" height="{{ div $img.Height 2 }}" alt="A picture of Remy Sheppard wearing a red shirt, standing in front of his Chrismtas Tree.">
+	</div>
+
+	<div class="bio-text">
+		{{ with .Site.GetPage "/about" }}
+			{{ .Content }}
+		{{ end }}
+	</div>
+</section>

@@ -1,0 +1,11 @@
+.biography {
+
+	.bio-img {
+		background: rgba($p-400, 0.6);
+		
+		img {
+			border-color: $black;
+	    box-shadow: 0 0 10px 0 rgba($white,0.6);
+		}
+	}
+}
