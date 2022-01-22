@@ -1,0 +1,83 @@
+.portfolio {
+
+	h2 {
+		text-align: center;
+	}
+
+	.card-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+
+		margin: 1em;
+
+		.card {
+			flex-basis: 25%;
+			padding: 0.25em 1em;
+			margin: 1em;
+
+			background: rgba($g-100, 0.5);
+
+			border-radius: 1em;
+			box-shadow: 0 0 10px 1px rgba($black, 0.6);
+
+			img {
+				margin: 0 auto;
+				display: block;
+			}
+
+			h3 {
+				font-size: $h5;
+				margin: 1.5em 0 1em 0;
+				position: relative;
+
+				&::before {
+					content: attr(data-meta);
+
+					position: absolute;
+					top: -1.5em;
+					left: 0;
+
+					color: $r-500;
+					font-size: $xsmall;
+				}
+			}
+
+			.description {
+				font-size: $small;
+				margin: 0 0 2em 0;
+				line-height: 1.25
+			}
+
+			.learn-more {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: flex-end;
+				line-height: 1;
+				margin-bottom: 1em;
+
+				.visit {
+					position: relative;
+					background: $p-400;
+					padding: 0.5em 1em;
+					border-radius: 2em;
+					border-bottom: none !important;
+					color: $white !important;
+					width: 50%;
+					text-align: center;
+
+					&:hover {
+						transform: translateY(-10px);
+						box-shadow: 0 5px 10px 1px rgba($black, 0.6);
+					}
+				}
+			}
+		}
+
+		@media only screen and (min-width: 40em) {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	}
+}
