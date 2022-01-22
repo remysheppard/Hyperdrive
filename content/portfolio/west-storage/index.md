@@ -1,0 +1,13 @@
+---
+title: West Storage Case Study
+client:
+- name: West Storage Company
+  url: https://www.weststoragecompany.com
+description: Christus Victor needed a simple, easy to understand website that showcased service times, enabled online giving, and didn't cost them a fortune. Hyperdrive was able to create a clean, simple design that utilizes white space and accent colors. We were retained to maintain the website
+---
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc egestas convallis eros, ut egestas ipsum dictum ut. Nullam gravida vestibulum purus. Sed nisi ipsum, pharetra rhoncus tincidunt sit amet, euismod ac leo. Praesent vitae ultrices nibh. Pellentesque ante orci, cursus et nibh eget, pretium pellentesque eros. Sed non facilisis est. Proin eget accumsan erat. Etiam et dictum risus. Donec accumsan, massa et egestas porta, ante erat viverra metus, in vehicula orci mauris vitae ligula. Duis lobortis consequat nibh, a aliquam ipsum vulputate vitae. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean ac suscipit leo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Ut bibendum gravida luctus. Vestibulum elementum, risus id semper aliquam, felis turpis ultrices sem, viverra vehicula elit velit quis sem. Morbi dictum enim ac quam pellentesque, quis interdum lectus aliquet. Duis in semper enim, sit amet consectetur libero. Duis euismod sem metus, vel iaculis augue gravida vel. Etiam sit amet augue lacus. Quisque eu risus at ex ornare auctor sed vitae odio. Proin pharetra ultricies tincidunt. Vestibulum eget massa at sem porttitor varius ac quis dui. Sed nibh nunc, sagittis sed tempor in, condimentum ut magna. Praesent gravida magna efficitur tellus suscipit, nec accumsan neque feugiat. Donec libero neque, dapibus vitae imperdiet in, maximus sit amet massa. Suspendisse malesuada elit ut fermentum dictum. Integer nec dictum nunc. Phasellus blandit lectus vitae nunc iaculis, sit amet suscipit mi facilisis.
+
+Nulla nec malesuada massa. Mauris varius consequat mi at vestibulum. Ut et arcu ut ex finibus placerat et ac sapien. Pellentesque pulvinar risus ut eleifend viverra. Suspendisse potenti. Integer ac dui faucibus, consequat risus id, tempor dui. Duis a venenatis lectus, ac dignissim est. Nulla gravida pulvinar erat non auctor. Morbi convallis arcu non tortor pellentesque aliquam. Sed faucibus tempor efficitur. Proin sem metus, tincidunt vitae neque quis, feugiat accumsan nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi sit amet metus iaculis, venenatis libero finibus, sagittis erat. Etiam non elit non est consequat elementum sit amet sed dui. Suspendisse at tempus lacus. Nunc ullamcorper ut velit non fringilla.

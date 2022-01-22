@@ -1,0 +1,23 @@
+<section class="portfolio inner-content">
+	<h2 class="h1">Our <span class="emphasis">Work</span></h2>
+
+	<div class="card-section">
+
+		{{ $portfolio := where site.RegularPages "Type" "eq" "portfolio" }}
+		{{ range first 3 $portfolio }}
+			<div class="card">
+				<img src="https://picsum.photos/400/200">
+				<h3{{ with .Params.Category }} data-meta="{{ . }}"{{ end }}>{{ .Title }}</h3>
+				<p class="description">
+					{{ .Params.description }}
+				</p>
+				<div class="learn-more">
+					 <a href="" target="_blank">Visit</a>
+					<a href="{{ .RelPermalink }}">Learn More</a>
+				</div>
+			</div>
+		{{ end }}
+
+	</div>
+
+</section>
