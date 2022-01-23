@@ -1,6 +1,14 @@
 {
 	"websites": [
 		{
+			"client": "Central Ohio Lutheran Immigrant Mission",
+			"category": "TailWind & Hugo",
+			"uri": "https://colim.netlify.app",
+			"feature": "colim.png",
+			"description": "The Central Ohio Lutheran Immigrant Mission needed a simple, one-page website that gave information about their mission, enabled giving, and allowed for newsletter subscribers."
+		},
+
+		{
 			"client": "Christus Victor Lutheran Church",
 			"category": "Hugo Development",
 			"uri": "https://www.christusvictor.church",
