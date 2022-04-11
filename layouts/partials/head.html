@@ -12,15 +12,23 @@
   {{ end }}
 
   <!-- Twitter Card -->
+  {{ $defaultImg := (resources.Get "/images/social-banner.png").Resize "1000x webp q85" }}
+  {{ $pageImg := "" }}
+  {{ with .Params.Image }}
+    {{ $pageImg = (resources.Get .).Resize "1000x webp q85" }}
+  {{ else }}
+    {{ $pageImg = $defaultImg }}
+  {{ end }}
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
   <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  {{ if .IsHome}}<meta name="twitter:image" content="{{ .Site.Params.author.author__image | absURL }}">{{ else }}<meta name="twitter:image" content="{{ .Params.Image | absURL }}">{{ end }}
+  {{ if .IsHome}}<meta name="twitter:image" content="{{ $defaultImg.RelPermalink }}">{{ else }}<meta name="twitter:image" content="{{ $pageImg.RelPermalink }}">{{ end }}
 
   <!-- Facebook OpenGraph -->
   <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  {{ if .IsHome}}<meta property="og:image" content="{{ .Site.Params.author.author__image | absURL }}">{{ else }}<meta property="og:image" content="{{ .Params.Image | absURL }}">{{ end }}
+  {{ if .IsHome}}<meta property="og:image" content="{{ $defaultImg.RelPermalink }}">{{ else }}<meta property="og:image" content="{{ $pageImg.RelPermalink }}">{{ end }}
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
