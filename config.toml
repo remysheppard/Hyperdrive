@@ -82,10 +82,16 @@ paginate = 6
     testimonial__description = "We're good, but you don't have to take our word for it!"
 
   [[params.testimonial_item]]
-    name= "Carla West"
+    name = "Carla West"
     image = "/images/testimonials/carla.jpg"
     designation = "Business Onwer"
     content = "West Storage was in desperate need of a new website. Hyperdrive was able to get us what we wanted and his vision was way great. We have said over and over again what a great investment the website was for our small business."
+
+  [[params.testimonial_item]]
+    name = "Rev. Ben Meyer"
+    image = "/images/testimonials/ben-meyer.jpg"
+    designation = "LCMS Pastor"
+    content = "It has been a pleasure to work with Remy in developing a website for the Central Ohio Lutheran Immigrant Mission. He has gone above and beyond in his work and his experience in developing websites has been a tremendous asset for us."
 
 
   #-------------------------------
