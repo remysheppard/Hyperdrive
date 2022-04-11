@@ -1,33 +1,44 @@
-<title>
-  {{ .Site.Title }} - {{ .Site.Params.Description }}
-</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
 
-<!-- // { Meta Tags } -->
-{{ hugo.Generator }}
-<meta charset="utf-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
-<meta name="description" content="{{- .Site.Params.description -}}">
+  <title>{{ if not .IsHome }}{{ humanize .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Description }}{{end}}">
 
-{{ template "_internal/opengraph.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
+  {{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end }}
 
-<!-- // { Styling } -->
-<style type="text/css">
-  {{ (resources.Get "css/main.scss" | toCSS | minify).Content | safeCSS }}
-</style>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
+  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+  {{ if .IsHome}}<meta name="twitter:image" content="{{ .Site.Params.author.author__image | absURL }}">{{ else }}<meta name="twitter:image" content="{{ .Params.Image | absURL }}">{{ end }}
 
-<!-- // { FontAwesome } -->
-<link rel="preload" as="script" href="https://kit.fontawesome.com/a1b60d1457.js">
-<script src="https://kit.fontawesome.com/a1b60d1457.js" crossorigin="anonymous"></script>
+  <!-- Facebook OpenGraph -->
+  <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+  {{ if .IsHome}}<meta property="og:image" content="{{ .Site.Params.author.author__image | absURL }}">{{ else }}<meta property="og:image" content="{{ .Params.Image | absURL }}">{{ end }}
 
-<!-- // { Favicon } -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#603cba">
-<meta name="theme-color" content="#ffffff">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800;900&display=swap" as="style">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800;900&display=swap" rel="stylesheet">
 
-<!-- // { Analytics by Fathom } -->
-<script src="https://enchanting-okay.hyperdrivecodes.com/script.js" data-site="GQQKVNZC" defer></script>
+  <!-- Ionicons -->
+  <link rel="preload" href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" as="style">
+
+  <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  {{ with resources.Get "sass/main.scss" | toCSS | minify }}
+  <style>{{ .Content | safeCSS }}</style>
+  {{ end }}
+
+  <script src="https://enchanting-okay.hyperdrivecodes.com/script.js" data-site="GQQKVNZC" defer></script>
+
+</head>

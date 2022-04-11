@@ -1,0 +1,58 @@
+{{ if .Site.Params.howItWorks.enable }}
+<!-- begin howItWorks -->
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="contaniner__inner animate">
+          <div class="section__info">
+            <div class="section__head">
+            	<div>
+	              <h2 class="section__title">{{ .Site.Params.howItWorks.howItWorks__title | safeHTML }}</h2>
+	              <h3 class="section__subtitle">{{ .Site.Params.howItWorks.howItWorks__subtitle | safeHTML }}</h3>
+	            </div>
+	            {{ if .Site.Params.howItWorks.howItWorks__description }}
+	              <p class="section__description">{{ .Site.Params.howItWorks.howItWorks__description }}</p>
+	            {{ end }}
+            </div>
+          </div>
+          <div class="row howItWorks">
+        		<ul>
+							<li><span class="text-span">Mobile-First Customized Website</span><br>
+								<span class="expanded">
+									We will migrate all significant content to our hand-made, fully customized, mobile-friendly website, complete with your images and logos. We will make sure your new site matches any style guide or branding requirements as well!
+								</span>
+							</li>
+							<li><span class="text-span">Local Search Optomization</span><br>
+								<span class="expanded">
+									We create at least 100 local business citations to create credibility for your new website. We will also submit your site to search engines and fully optimize your Google Business Profile. These steps together will help you rank high in the Map Pack on local searches. 
+								</span>
+							</li>
+							<li><span class="text-span">24/7 Customer Service</span><br>
+								<span class="expanded">
+									We will be there to help you with your website any time, day or night. We're ready to answer your questions and help you get the most out of your website, whenever might be most convenient for you! We will always be available to you by phone or email.
+								</span>
+							</li>
+							<li><span class="text-span">Domain & Hosting</span><br>
+								<span class="expanded">
+									If you don't already have a domain name (like a .com or .net), we will purchase you one. We will also provide hosting for you on our lightning fast, global Content Distribution Network (CDN). 
+								</span>
+							</li>
+							<li><span class="text-span">Unlimited Changes</span><br>
+								<span class="expanded">
+									Running a special, and want a fancy banner for it? We got you. Need to change out a picture on the home page? No problem. Need to add a new team member's profile? Easy. If you need anything updated or changed, just call or email and we'll handle it for you so you can handle your business.
+								</span>
+							</li>
+							<li><span class="text-span">Fathom Analytics</span><br>
+								<span class="expanded">
+									We will install Fathom Analytics on your website so you can track user experience without invading guest privacy. Fathom is a privacy-focused analytics service that gives you comprehensive data without those annoying cookie banners. <a href="https://usefathom.com/ref/JHDRUD" target="_blank">Learn more about Fathom at their website</a>.
+								</span>
+							</li>
+						</ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end howItWorks -->
+{{ end }}

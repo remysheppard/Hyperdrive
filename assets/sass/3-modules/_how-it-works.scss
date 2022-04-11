@@ -1,0 +1,24 @@
+.howItWorks {
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-evenly;
+		gap: 1em;
+
+		li {
+			width: 90%;
+			font-weight: 900;
+
+			@media (min-width: $tablet) {
+				width: 45%;
+			}
+
+			.expanded {
+				font-weight: 400;
+				font-size: 0.95rem;
+			}
+		}
+	}
+}

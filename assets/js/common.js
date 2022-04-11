@@ -1,57 +1,169 @@
-// Mobile Nav Trigger
-const menuButton = document.getElementById('mobile-trigger')
-const closeButton = document.getElementById('mobile-close-trigger')
+window.addEventListener("load", function(){
+  'use strict';
 
-menuButton.addEventListener('click', () => {
-	console.log('menu Click!')
-	document.getElementById('mobile-menu').style.width = "85%";
+  /* =======================
+  // Menu
+  ======================= */
+  var body = document.querySelector("body"),
+  contactBox = document.querySelector(".contact-modal"),
+  contactOpenButton = document.querySelector(".cta-button"),
+  contactCloseButton = document.querySelector(".contact-close"),
+  menuOpenIcon = document.querySelector(".nav__icon-menu"),
+  menuCloseIcon = document.querySelector(".nav__icon-close"),
+  menuList = document.querySelector(".main-nav");
+
+  menuOpenIcon.addEventListener("click", () => {
+    menuOpen();
+  });
+
+  menuCloseIcon.addEventListener("click", () => {
+    menuClose();
+  });
+
+  if (contactBox) {
+    contactOpenButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      contactOpen();
+    });
+  }
+
+  if (contactBox) {
+    contactCloseButton.addEventListener("click", (e) => {
+      contactClose();
+    });
+  }
+
+  function menuOpen() {
+    menuList.classList.add("is-open");
+  }
+
+  function menuClose() {
+    menuList.classList.remove("is-open");
+  }
+
+  function contactOpen() {
+    contactBox.classList.add("is-visible");
+    menuList.classList.remove("is-open");
+  }
+
+  function contactClose() {
+    contactBox.classList.remove("is-visible");
+  }
+
+
+  /* =======================
+  // Animation Load Page
+  ======================= */
+  setTimeout(function(){
+    body.classList.add("is-in");
+  },150)
+
+
+  /* ======================================
+  // Stop Animations During Window Resizing
+  ====================================== */
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    document.body.classList.add("resize-animation-stopper");
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      document.body.classList.remove("resize-animation-stopper");
+    }, 300);
+  });
+
+
+  /* =======================
+  // Responsive Videos
+  ======================= */
+  reframe(".post__content iframe:not(.reframe-off), .page__content iframe:not(.reframe-off), .project-content iframe:not(.reframe-off)");
+
+
+  /* =======================
+  // Zoom Image
+  ======================= */
+  const lightense = document.querySelector(".page img, .post img, .project-content img"),
+  imageLink = document.querySelectorAll(".page a img, .post a img, .project-content a img");
+
+  if (imageLink) {
+    for (var i = 0; i < imageLink.length; i++) imageLink[i].parentNode.classList.add("image-link");
+    for (var i = 0; i < imageLink.length; i++) imageLink[i].classList.add("no-lightense");
+  }
+
+  if (lightense) {
+    Lightense(".page img:not(.no-lightense), .post img:not(.no-lightense), .project-content img:not(.no-lightense)", {
+    padding: 60,
+    offset: 30
+    });
+  }
+
+
+  /* =======================
+  // LazyLoad Images
+  ======================= */
+  var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+  })
+
+
+  /* ============================
+  // Smooth scrolling to section
+  ============================ */
+  document.querySelectorAll(".author__btn").forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+
+
+  /* ============================
+  // Testimonials Slider
+  ============================ */
+  if (document.querySelector(".my-slider")) {
+    var slider = tns({
+      container: ".my-slider",
+      items: 3,
+      slideBy: 1,
+      gutter: 32,
+      nav: false,
+      mouseDrag: true,
+      autoplay: false,
+      controlsContainer: "#customize-controls",
+      responsive: {
+        1024: {
+          items: 3,
+        },
+        768: {
+          items: 2,
+        },
+        0: {
+          items: 1,
+        }
+      }
+    });
+  }
+
+
+  /* ============================
+  // Scroll to top
+  ============================ */
+  const btnScrollToTop = document.querySelector(".top");
+
+  window.addEventListener("scroll", function () {
+    window.scrollY > window.innerHeight ? btnScrollToTop.classList.add("is-active") : btnScrollToTop.classList.remove("is-active");
+  });
+
+  btnScrollToTop.addEventListener("click", function () {
+    if (window.scrollY != 0) {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      })
+    }
+  });
+
 });
-
-closeButton.addEventListener('click', () => {
-	document.getElementById('mobile-menu').style.width = 0;
-});
-
-// Dark Mode
-const body = document.body;
-const switcher = document.getElementsByClassName('js-toggle')[0];
-const house = document.getElementsByName('house-icon')
-
-//Click on dark mode icon. Add dark mode classes and wrappers. Store user preference through sessions
-switcher.addEventListener("click", function() {
-  this.classList.toggle('js-toggle--checked');
-  this.classList.add('js-toggle--focus');
-	//If dark mode is selected
-	if (this.classList.contains('js-toggle--checked')) {
-		body.classList.add('dark-mode');
-		house.forEach(e => {
-			e.classList.remove('fa-house-day')
-			e.classList.add('fa-house-night')
-		})
-
-		//Save user preference in storage
-		localStorage.setItem('darkMode', 'true');
-	} else {
-		body.classList.remove('dark-mode');
-		house.forEach(e => {
-			e.classList.add('fa-house-day')
-			e.classList.remove('fa-house-night')
-		})
-		setTimeout(function() {
-			localStorage.removeItem('darkMode');
-		}, 100);
-	}
-})
-
-//Check Storage. Keep user preference on page reload
-if (localStorage.getItem('darkMode')) {
-	//body.classList.add('dark-mode');
-  switcher.classList.add('js-toggle--checked');
-  body.classList.add('dark-mode');
-		house.forEach(e => {
-			e.classList.remove('fa-house-day')
-			e.classList.add('fa-house-night')
-		})
-}
-
-// Latest Post
-//this doesn't exist yet, but will pull the latest post from https://www.remysheppard.com/index.xml

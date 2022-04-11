@@ -1,0 +1,145 @@
+#-------------------------------
+# General Site Settings
+baseURL = "https://www.hyperdrivecodes.com/"
+languageCode = "en-us"
+title = "Hyperdrive Website Development"
+paginate = 6
+
+
+[params]
+  logo = "/images/hyperdrive-text-logo.png" # You can add own logo. For example "/images/logo.png".
+  description = "Lightning Fast, fully customized websites for your business."
+
+
+[params.global.image]
+  enable = true
+  cover__image = '/images/banner.jpg'
+
+#-------------------------------
+# Main Menu
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/posts/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "nonprofit"
+    name = "Non Profit?"
+    url = "/non-profit/"
+    weight = 4
+
+  # Call to action button
+  [params.menu.button]
+    cta__button__text = "Get in touch"
+
+
+  #-------------------------------
+  # Author Settings
+  [params.author]
+    author__name = "Remy Sheppard"
+    author__title = "Hey, I'm Remy"
+    author__bio = "I founded Hyperdrive Web Development so you could have a high-quality, functional, reliable website for your business that you never have to worry about."
+    author__image = "/images/me-base.jpg"
+    author__avatar = "/images/me-small.jpg"
+    button__text = "See What We Do"
+
+
+  #-------------------------------
+  # Projects Settings
+  [params.projects]
+    enable = true
+    projects__title= "Our Latest <span class='text-span'>Builds</span>" # Add a 'text-span' class to highlight text.
+    projects__description= "High quality, functional websites that capture leads, grow your business, and stay out of your hair."
+
+
+  #-------------------------------
+  # How It Works Settings
+  [params.howItWorks]
+    enable = true
+    howItWorks__title= "<span class='text-span'>$0</span> Down, <span class='text-span'>$200</span> a month." # Add a 'text-span' class to highlight text.
+    howItWorks__subtitle= "No Contracts. No Hassle. <span class='text-span'>Simple as.<span>"
+    howItWorks__description= "Get the website you want with no contracts, no hassle, and no giant down payment. For $200 a month your business will have a professional, 5-page website available online that you never have to worry about."
+
+  #-------------------------------
+  # Testimonials Section
+  [params.testimonials]
+    enable = true
+    testimonial__title = "What Our <span class='text-span'>Clients</span> Say" # Add a 'text-span' class to highlight text.
+    testimonial__description = "We're good, but you don't have to take our word for it!"
+
+  [[params.testimonial_item]]
+    name = "Hans Fiene"
+    image = "/images/hans.jpg"
+    designation = "Pastor"
+    content = "Remy built a wonderful website for our church."
+
+
+  #-------------------------------
+  # Blog Section
+  [params.blog]
+    enable = true
+    blog__title = "Recent <span class='text-span'>Blog</span> Posts" # Add a 'text-span' class to highlight text.
+    blog__description = "Deep dives into the ideas behind what we do."
+
+
+  #-------------------------------
+  # Contact Settings
+  [params.contact]
+    enable = true
+    contact__email = "me@remysheppard.com" # Add your form_id
+    contact__title = "<span class='text-span'>Get</span> in touch" # Add a title to your form
+    contact__description = "We're excited to help you build your website!" # Add a description to your form
+
+
+  #-------------------------------
+  # Newsletter Settings
+  [params.mailchimp]
+    enable = true
+    mailchimp__title = "For <span class='text-span'>free</span> tips & tricks" # Add your title
+    mailchimp__text = "Join our list!" 
+    mailchimp__identifier = "hyperdrivecodes.us14.list-manage.com/subscribe/post?u=24c77d592738ea5dde6650933&amp;id=9bfb73ed5e"
+    mailchimp__button__text = "Subscribe" # Add your button text
+
+  #-------------------------------
+  # Comment Section (Disqus)
+  [params.disqus]
+    enable = false
+
+  #-------------------------------
+  # Footer Settings
+  # Social Links
+  [[params.social]]
+    icon = "ion-logo-github"
+    name = "Github"
+    link = "https://github.com/bootyocean18"
+
+  [[params.social]]
+    icon = "ion-logo-facebook"
+    name = "Facebook"
+    link = "https://www.facebook.com/hyperdrivecodes"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  noClasses = false

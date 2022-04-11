@@ -1,10 +1,21 @@
-<footer class="site-footer">
-	Copyright <i class="fa-light fa-copyright fa-fw"></i> {{ now.Format "2006" }} Hyperdrive Associates, LLC.
-</footer>
+<!-- begin footer -->
+<footer class="footer">
 
-{{ $js := resources.Get "js/common.js" | minify }}
-{{ with $js }}
-	<script type="text/javascript" defer>
-		{{ .Content | safeJS }}
-	</script>
-{{ end }}
+  {{ if .Site.Params.global.image.enable }}
+    <div class="footer-cover">
+      <div class="cover-image">
+        <img class="lazy" data-src="{{.Site.Params.global.image.cover__image}}" alt="{{.Site.Params.title}}">
+      </div>
+    </div>
+  {{ end }}
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        {{ partial "social-links.html" . }}
+        <div class="copyright">{{ dateFormat "2006" now }} &copy; <a href="/">{{ .Site.Title }}</a>. All Right Reserved. Published with <a href="https://gohugo.io/">Hugo</a>.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->
