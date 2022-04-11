@@ -32,8 +32,9 @@
                 {{ end }}
                 <div class="client-meta">
                   {{ if .image }}
+                    {{ $img := (resources.Get .image).Resize "120x webp q85" }}
                     <div class="image-container">
-                      <img class="client-avatar" src="{{ .image }}" alt="{{ .name }}">
+                      <img class="client-avatar" src="{{ $img.RelPermalink }}" alt="{{ .name }}" height="{{ div $img.Height 2 }}" width="{{ div $img.Width 2 }}">
                     </div>
                   {{ end }}
                   <div class="client-info">

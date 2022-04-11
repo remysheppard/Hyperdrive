@@ -4,7 +4,8 @@
     {{ if .Params.Image }}
       <div class="image-wrap">
         <a class="article__image" href="{{ .RelPermalink }}">
-          <img class="lazy" data-src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
+          {{ $img := (resources.Get .Params.Image).Resize "350x webp q85" }}
+          <img class="lazy" data-src="{{ $img.RelPermalink }}" alt="{{ .Title }}">
         </a>
       </div>
     {{ end }}
@@ -27,7 +28,8 @@
 
       <div class="article__meta">
         <a href="/about/" class="article__author-image">
-          <img src="{{ .Site.Params.author.author__avatar }}" alt="{{.Site.Params.author.author__name}}">
+          {{ $authorImg := (resources.Get .Site.Params.author.author__avatar).Resize "120x webp q85" }}
+          <img src="{{ $authorImg.RelPermalink }}" alt="{{.Site.Params.author.author__name}}">
         </a>
         <div class="article-info">
           <a href="/about/" class="article__author-link">{{.Site.Params.author.author__name}}</a>

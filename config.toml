@@ -72,7 +72,7 @@ paginate = 6
     enable = true
     howItWorks__title= "<span class='text-span'>$0</span> Down, <span class='text-span'>$200</span> a month." # Add a 'text-span' class to highlight text.
     howItWorks__subtitle= "No Contracts. No Hassle. <span class='text-span'>Simple as.<span>"
-    howItWorks__description= "Get the website you want with no contracts, no hassle, and no giant down payment. For $200 a month your business will have a professional, 5-page website available online that you never have to worry about."
+    howItWorks__description= "Get the website you want with no contracts, no hassle, and no giant down payment. For $200 a month your business will have a professional website available online that you never have to worry about."
 
   #-------------------------------
   # Testimonials Section
@@ -82,10 +82,10 @@ paginate = 6
     testimonial__description = "We're good, but you don't have to take our word for it!"
 
   [[params.testimonial_item]]
-    name = "Hans Fiene"
-    image = "/images/hans.jpg"
-    designation = "Pastor"
-    content = "Remy built a wonderful website for our church."
+    name= "Carla West"
+    image = "/images/testimonials/carla.jpg"
+    designation = "Business Onwer"
+    content = "West Storage was in desperate need of a new website. Hyperdrive was able to get us what we wanted and his vision was way great. We have said over and over again what a great investment the website was for our small business."
 
 
   #-------------------------------

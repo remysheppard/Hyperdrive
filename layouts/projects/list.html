@@ -18,7 +18,8 @@
     <article class="project col col-4 col-d-6 col-t-12">
       <div class="project__content">
         <a href="{{ .RelPermalink }}" class="project__image">
-          <img class="lazy" data-src="{{ .Params.Image | absURL }}" alt="{{ .Params.Title }}">
+          {{ $img := (resources.Get .Params.Image).Resize "500x webp q85" }}
+          <img class="lazy" data-src="{{ $img.RelPermalink }}" alt="{{ .Params.Title }}">
         </a>
         <div class="project__info">
           <div class="project__info-wrap">

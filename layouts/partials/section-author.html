@@ -17,7 +17,8 @@
 
           <div class="author__right">
             <div class="author__image">
-              <img class="lazy" data-src="{{ .Site.Params.author.author__image }}" alt="{{.Site.Params.author.author__name}}'s Picture">
+              {{ $img := (resources.Get .Site.Params.author.author__image).Fill "480x480 q85 webp center" }}
+              <img class="lazy" data-src="{{ $img.RelPermalink }}" alt="{{.Site.Params.author.author__name}}'s Picture">
             </div>
           </div>
 
