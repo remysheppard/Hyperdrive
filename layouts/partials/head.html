@@ -1,8 +1,10 @@
 <head>
+  {{ hugo.Generator }}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- // { Favicon Pack } -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -45,16 +47,16 @@
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
   <meta property="og:image" content="{{ if .IsHome}}{{ $defaultImg.Permalink }}{{ else }}{{ $pageImg.Permalink }}{{ end }}">
 
-  <!-- Ionicons -->
-  <link rel="preload" href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" as="style">
-
-  <link href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" rel="stylesheet">
+  <!-- // { FontAwesome } -->
+  <link rel="preload" as="script" href="https://kit.fontawesome.com/a1b60d1457.js">
+  <script src="https://kit.fontawesome.com/a1b60d1457.js" defer crossorigin="anonymous"></script>
 
   <!-- CSS -->
   {{ with resources.Get "sass/main.scss" | toCSS | minify }}
   <style>{{ .Content | safeCSS }}</style>
   {{ end }}
 
+  <!-- // { Fathom Analytics } -->
   <script src="https://enchanting-okay.hyperdrivecodes.com/script.js" data-site="GQQKVNZC" defer></script>
 
 </head>

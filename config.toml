@@ -93,7 +93,6 @@ paginate = 6
     designation = "LCMS Pastor"
     content = "It has been a pleasure to work with Remy in developing a website for the Central Ohio Lutheran Immigrant Mission. He has gone above and beyond in his work and his experience in developing websites has been a tremendous asset for us."
 
-
   #-------------------------------
   # Blog Section
   [params.blog]
@@ -129,12 +128,12 @@ paginate = 6
   # Footer Settings
   # Social Links
   [[params.social]]
-    icon = "ion-logo-github"
+    icon = "fa-github"
     name = "Github"
     link = "https://github.com/bootyocean18"
 
   [[params.social]]
-    icon = "ion-logo-facebook"
+    icon = "fa-facebook"
     name = "Facebook"
     link = "https://www.facebook.com/hyperdrivecodes"
 

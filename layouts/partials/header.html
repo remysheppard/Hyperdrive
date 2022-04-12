@@ -18,7 +18,7 @@
         <nav class="main-nav">
           <div class="main-nav__box">
             <div class="nav__icon-close">
-              <i class="ion ion-md-close"></i>
+              <i class="fa-regular fa-xmark"></i>
             </div>
             <div class="nav__title">Menu</div>
             <ul class="nav__list list-reset">
@@ -31,7 +31,7 @@
 
               {{ if .HasChildren }}
                 <li class="nav__item dropdown">
-                  <span class="nav__link dropdown-toggle">{{ .Name }} <i class="ion ion-ios-arrow-down arrow-down"></i></span>
+                  <span class="nav__link dropdown-toggle">{{ .Name }} <i class="fa-regular fa-angle-down"></i></span>
                   <div class="dropdown-menu">
                     {{ range .Children }}
                     {{ $childURL := .URL | absLangURL }}
@@ -63,7 +63,7 @@
         </nav>
 
         <div class="nav-button">
-          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+          <i class="nav__icon nav__icon-menu fa-regular fa-bars"></i>
         </div>
 
       </div>
