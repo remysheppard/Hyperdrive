@@ -2,9 +2,24 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
 
-  <title>{{ if not .IsHome }}{{ humanize .Title }} | {{ end }}{{ .Site.Title }}</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>
+    {{ if not .IsHome }}
+      {{ humanize .Title }}&nbsp;|&nbsp;
+    {{ end }}
+    {{ .Site.Title }}
+    {{ if .IsHome }}
+      &nbsp;|&nbsp;Customized Small Business Websites
+    {{ end }}
+  </title>
   <meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{ .Description }}{{end}}">
 
   {{ with .OutputFormats.Get "rss" -}}
@@ -23,19 +38,12 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
   <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  {{ if .IsHome}}<meta name="twitter:image" content="{{ $defaultImg.RelPermalink }}">{{ else }}<meta name="twitter:image" content="{{ $pageImg.RelPermalink }}">{{ end }}
+  <meta name="twitter:image" content="{{ if .IsHome}}{{ $defaultImg.Permalink }}{{ else }}{{ $pageImg.Permalink }}{{ end }}">
 
   <!-- Facebook OpenGraph -->
   <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}">
   <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  {{ if .IsHome}}<meta property="og:image" content="{{ $defaultImg.RelPermalink }}">{{ else }}<meta property="og:image" content="{{ $pageImg.RelPermalink }}">{{ end }}
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800;900&display=swap" as="style">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800;900&display=swap" rel="stylesheet">
+  <meta property="og:image" content="{{ if .IsHome}}{{ $defaultImg.Permalink }}{{ else }}{{ $pageImg.Permalink }}{{ end }}">
 
   <!-- Ionicons -->
   <link rel="preload" href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" as="style">

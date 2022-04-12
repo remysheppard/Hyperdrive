@@ -15,16 +15,29 @@ $global-transition: all .35s;
 // *****************
 // Typography
 // *****************
+
+@font-face {
+  font-family: "CodecPro Extra Bold";
+  src: url("../fonts/CodecPro-ExtraBold.woff2") format("woff2"),
+       url("../fonts/CodecPro-ExtraBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "CodecPro News";
+  src: url("../fonts/CodecPro-News.woff2") format("woff2"),
+       url("../fonts/CodecPro-News.woff") format("woff");
+}
+
 $base-font-size: 19px;
 $base-font-style: normal;
 $base-font-variant: normal;
 $base-font-weight: normal;
-$base-font-family: 'Nunito', Helvetica Neue, Helvetica, Arial, sans-serif;
+$base-font-family: 'CodecPro News', Helvetica Neue, Helvetica, Arial, sans-serif;
 $base-line-height: 1.5;
 
 // Headings
 $heading-font-weight: 800;
-$heading-font-family: 'Nunito', Helvetica Neue, Helvetica, Arial, sans-serif;
+$heading-font-family: 'CodecPro Extra Bold', Helvetica Neue, Helvetica, Arial, sans-serif;
 
 $font-size-h1:  36px;
 $font-size-h2:  28px;
