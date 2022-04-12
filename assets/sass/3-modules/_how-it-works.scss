@@ -11,6 +11,20 @@
 			width: 90%;
 			font-weight: 900;
 
+			margin-bottom: 1.3em;
+			padding-left: 1em;
+
+			font-size: 1.2em;
+			line-height: 1;
+
+			&::marker {
+				content: "\e35c";
+				font: var(--fa-font-solid);
+				color: #f969cd;
+				font-size: 1em;
+
+			}
+
 			@media (min-width: $tablet) {
 				width: 45%;
 			}

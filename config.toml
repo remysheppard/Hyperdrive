@@ -56,6 +56,7 @@ paginate = 6
     author__image = "/images/me-base.jpg"
     author__avatar = "/images/me-small.jpg"
     button__text = "See What We Do"
+    button__link = "#HowItWorks"
 
 
   #-------------------------------

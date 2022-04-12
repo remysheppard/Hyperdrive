@@ -9,7 +9,7 @@
             <h1 class="author__name">{{ .Site.Params.author.author__title | safeHTML }}</h1>
             <p class="author__bio">{{ .Site.Params.author.author__bio | markdownify }}</p>
             {{ if .Site.Params.projects.enable }}
-            <a class="author__btn" href="#projects">
+            <a class="author__btn" href="{{ site.Params.author.button__link }}">
               <span class="circle-bg"><i class="fa-light fa-fw fa-lg fa-down" style="color:#fff"></i></span> {{ .Site.Params.author.button__text }}
             </a>
             {{ end }}

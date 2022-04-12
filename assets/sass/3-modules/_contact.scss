@@ -38,12 +38,12 @@
   background-color: rgba($primary-color, 0.08);
 
   &:hover {
-    .ion-md-close {
+    .fa-xmark {
       transform: rotate(90deg);
     }
   }
 
-  .ion-md-close {
+  .fa-xmark {
     color: $primary-color;
     transition: $global-transition;
 
