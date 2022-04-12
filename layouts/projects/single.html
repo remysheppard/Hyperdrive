@@ -14,7 +14,7 @@
     <div class="col col-12">
       <div class="page-image">
         {{ $img := (resources.Get .Params.image).Resize "1100x webp q85" }}
-        <img class="lazy" data-src="{{ $img.RelPermalink }}" alt="{{ .Title }}">
+        <img loading="lazy" src="{{ $img.RelPermalink }}" alt="{{ .Title }}">
       </div>
     </div>
   </div>

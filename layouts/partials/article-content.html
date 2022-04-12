@@ -5,7 +5,7 @@
       <div class="image-wrap">
         <a class="article__image" href="{{ .RelPermalink }}">
           {{ $img := (resources.Get .Params.Image).Resize "350x webp q85" }}
-          <img class="lazy" data-src="{{ $img.RelPermalink }}" alt="{{ .Title }}">
+          <img loading="lazy" src="{{ $img.RelPermalink }}" alt="{{ .Title }}">
         </a>
       </div>
     {{ end }}
@@ -29,7 +29,7 @@
       <div class="article__meta">
         <a href="/about/" class="article__author-image">
           {{ $authorImg := (resources.Get .Site.Params.author.author__avatar).Resize "120x webp q85" }}
-          <img src="{{ $authorImg.RelPermalink }}" alt="{{.Site.Params.author.author__name}}">
+          <img src="{{ $authorImg.RelPermalink }}" alt="{{.Site.Params.author.author__name}}" loading="lazy">
         </a>
         <div class="article-info">
           <a href="/about/" class="article__author-link">{{.Site.Params.author.author__name}}</a>

@@ -115,8 +115,8 @@ paginate = 6
   # Newsletter Settings
   [params.mailchimp]
     enable = true
-    mailchimp__title = "For <span class='text-span'>free</span> tips & tricks" # Add your title
-    mailchimp__text = "Join our list!" 
+    mailchimp__title = "Just want some <span class='text-span'>free</span> advice?" # Add your title
+    mailchimp__text = "Join our monthly mailer for tips, tricks, and more!" 
     mailchimp__identifier = "hyperdrivecodes.us14.list-manage.com/subscribe/post?u=24c77d592738ea5dde6650933&amp;id=9bfb73ed5e"
     mailchimp__button__text = "Subscribe" # Add your button text
 
@@ -131,7 +131,7 @@ paginate = 6
   [[params.social]]
     icon = "fa-github"
     name = "Github"
-    link = "https://github.com/bootyocean18"
+    link = "https://github.com/remysheppard"
 
   [[params.social]]
     icon = "fa-facebook"

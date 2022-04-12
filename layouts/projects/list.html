@@ -19,7 +19,7 @@
       <div class="project__content">
         <a href="{{ .RelPermalink }}" class="project__image">
           {{ $img := (resources.Get .Params.Image).Resize "500x webp q85" }}
-          <img class="lazy" data-src="{{ $img.RelPermalink }}" alt="{{ .Params.Title }}">
+          <img loading="lazy" src="{{ $img.RelPermalink }}" alt="{{ .Params.Title }}">
         </a>
         <div class="project__info">
           <div class="project__info-wrap">

@@ -9,7 +9,7 @@
       <div class="top-cover">
         <div class="cover-image">
           {{ $img := (resources.Get site.Params.global.image.cover__image).Resize "1200x webp q75" }}
-          <img class="lazy" data-src="{{ $img.RelPermalink }}" alt="{{.Site.Params.title}}">
+          <img loading="lazy" src="{{ $img.RelPermalink }}" alt="{{.Site.Params.title}}">
           
         </div>
       </div>

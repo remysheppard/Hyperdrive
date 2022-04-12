@@ -4,7 +4,7 @@
   {{ if .Site.Params.global.image.enable }}
     <div class="footer-cover">
       <div class="cover-image">
-        <img class="lazy" data-src="{{.Site.Params.global.image.cover__image}}" alt="{{.Site.Params.title}}">
+        <img loading="lazy" src="{{.Site.Params.global.image.cover__image}}" alt="{{.Site.Params.title}}">
       </div>
     </div>
   {{ end }}

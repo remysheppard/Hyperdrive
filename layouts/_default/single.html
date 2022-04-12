@@ -19,7 +19,7 @@
     <div class="col col-12">
       <div class="post-image">
         {{ $img := (resources.Get .Params.image).Resize "1100x webp q85" }}
-        <img class="lazy" data-src="{{ $img.RelPermalink }}" alt="{{ .Title }}">
+        <img loading="lazy" src="{{ $img.RelPermalink }}" alt="{{ .Title }}">
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@
       <div class="post__author">
         <a href="/about/" class="post__author-image">
           {{ $authorImg := (resources.Get .Site.Params.author.author__avatar).Resize "120x webp q85" }}
-          <img class="lazy" data-src="{{ $authorImg.RelPermalink }}" alt="{{.Site.Params.author.author__name}}">
+          <img loading="lazy" src="{{ $authorImg.RelPermalink }}" alt="{{.Site.Params.author.author__name}}">
         </a>
         <div class="post__author-info">
           <a href="/about/" class="post__author-link">{{.Site.Params.author.author__name}}</a>
@@ -72,7 +72,7 @@
     <div class="col col-12">
       <div class="page-image">
         {{ $img := (resources.Get .Params.image).Resize "1100x webp q85" }}
-        <img class="lazy" data-src="{{ $img.RelPermalink }}" alt="{{ .Title }}">
+        <img loading="lazy" src="{{ $img.RelPermalink }}" alt="{{ .Title }}">
       </div>
     </div>
   </div>
