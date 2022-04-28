@@ -4,7 +4,8 @@
   {{ if .Site.Params.global.image.enable }}
     <div class="footer-cover">
       <div class="cover-image">
-        <img loading="lazy" src="{{.Site.Params.global.image.cover__image}}" alt="{{.Site.Params.title}}">
+        {{ $img := (resources.Get site.Params.global.image.cover__image).Resize "1200x webp q75" }}
+        <img loading="lazy" src="{{ $img.RelPermalink }}" alt="{{.Site.Params.title}}">
       </div>
     </div>
   {{ end }}

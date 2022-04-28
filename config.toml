@@ -30,11 +30,11 @@ paginate = 6
     url = "/projects/"
     weight = 2
 
-  [[menu.main]]
-    identifier = "blog"
-    name = "Blog"
-    url = "/posts/"
-    weight = 3
+#  [[menu.main]]
+#    identifier = "blog"
+#    name = "Blog"
+#    url = "/posts/"
+#    weight = 3
 
   [[menu.main]]
     identifier = "nonprofit"

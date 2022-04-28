@@ -7,7 +7,7 @@
         <div class="logo">
           <a class="logo__link" href="{{ .Site.BaseURL }}">
             {{ if .Site.Params.logo }}
-            {{ $img := (resources.Get .Site.Params.logo).Resize "x100 webp q85" }}
+            {{ $img := (resources.Get .Site.Params.logo).Resize "x200 webp q85" }}
             <img class="logo__image" loading="lazy" src="{{ $img.RelPermalink }}" alt="{{ .Site.Title }}" height="{{ div $img.Height 2 }}" width="{{ div $img.Width 2 }}">
             {{ else }}
               {{ .Site.Title }}
